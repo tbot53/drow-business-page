@@ -8,7 +8,7 @@ import { CiHeart } from "react-icons/ci";
 
 const Footer = () => {
   return (
-    <footer className='bg-black p-8 text-white overflow-x-hidden md:h-[120vh] md:p-12'>
+    <footer className='bg-black p-8 text-white overflow-x-hidden md:h-contain md:p-12'>
       <section className='relative pb-12' >
         <h2 className='font-bold text-4xl text-center text-white md:text-7xl md:font-extrabold'>Let's make something extraordinary</h2>
 
