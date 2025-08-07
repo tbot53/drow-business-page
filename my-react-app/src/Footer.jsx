@@ -45,7 +45,7 @@ const Footer = () => {
         </ul>
       </section>
       <hr className='border-2 border-b-gray-700' />
-      <section className='text-center pt-2'>
+      <section className='text-gray-300 text-center pt-2 flex flex-col md:flex-row md:items-center md:justify-between md:pt-4 md:text-xl'>
         <p>Created by <span>Jesubamiro Aduragbemi</span></p>
         <p>&copy; BamielDev, All rights reserved </p>
       </section>
