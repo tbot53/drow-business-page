@@ -1,4 +1,4 @@
-import {useEffect} from 'react'
+import {useState} from 'react'
 import Marquee from "react-fast-marquee";
 import './VerticalMarquee.css'
 import { TbArrowWaveRightUp } from "react-icons/tb";
@@ -10,6 +10,7 @@ import shooter2 from './assets/img/shooter-2.jpg'
 import halo from './assets/img/halo.jpg'
 
 const Body = () => {
+
     const images = [shooter2, car, shooter];
     const directions = ["up", "down", "up"];
     const pointInfo = [
@@ -73,12 +74,12 @@ const Body = () => {
                 </div>
             ))}
         </section>
-        <section className="flex flex-col space-y-2 items-center justify-center  p-8 md:p-12 md:h-[60vh] md:text-center">
+        <section id='service' className="flex flex-col space-y-2 items-center justify-center  p-8 md:p-12 md:h-[60vh] md:text-center">
             <h2 className='font-bold text-3xl md:text-8xl md:p-6'>We are the website <span className="underline decoration-amber-300">growth partners</span> you've been looking for </h2>
             <p className=' md:text-2xl'>Aute exercitation ea deserunt anim id dolor magna aliquip. Pariatur nisi tempor deserunt labore consequat commodo ad. Ad ipsum reprehenderit incididunt sit cupidatat magna id ea. Eiusmod adipisicing cupidatat et excepteur. Excepteur nisi consequat ullamco sunt elit.</p>
         </section>
 
-        <section className='p-8 bg-gray-200 text-center flex flex-col space-y-3 md:flex-row md:space-y-0 md:items-center md:justify-between md:p-12 md:h-96'>
+        <section id='project' className='p-8 bg-gray-200 text-center flex flex-col space-y-3 md:flex-row md:space-y-0 md:items-center md:justify-between md:p-12 md:h-96'>
             <div>
                 <h3 className='font-bold text-3xl md:text-8xl'>400+</h3>
                 <p className='text-xl md:text-3xl'>Websites Built</p>
@@ -93,7 +94,7 @@ const Body = () => {
             </div>
         </section>
 
-        <section className='bg-[#191618] p-8 text-white'>
+        <section  className='bg-[#191618] p-8 text-white'>
             <h2 className='text-4xl md:text-6xl font-bold mb-6'>
                 <p className='text-amber-300'>Our superpower?</p>
                 <p>Making it as easy as possible for you</p>
@@ -160,7 +161,7 @@ const Body = () => {
             <div className='flex flex-col space-y-6 md:flex-row md:space-y-0 md:space-x-8 md:items-center md:justify-center'>
                 {pointInfo.map((points, index)=>{
                     return(
-                       <article key={index} className={`border-2 border-black p-4 bg-white rounded-lg shadow-xl md:w-72 md:h-102 border-r-6 border-b-6`} style={{ transform: `rotate(${points.deg}deg)` }}>
+                       <article key={index} className={`border-2 border-black p-4 bg-white rounded-lg shadow-xl md:w-72 md:h-contain border-r-6 border-b-6`} style={{ transform: `rotate(${points.deg}deg)` }}>
                             <h3 className='font-bold text-2xl md:text-4xl'>{points.title}</h3>
                             <p className='md:text-xl'>{points.subtitle}</p>
                             <p className='text-green-500 text-3xl rotate-45 w-fit' size={"4.5rem"} >{points.icon}</p>
@@ -171,7 +172,7 @@ const Body = () => {
             </div>
 
         </section>
-        <section className='p-8 bg-[#F8FEFF] flex flex-col space-y-6 md:flex-row md:space-y-0 md:space-x-3  md:justify-between'>
+        <section id='about' className='p-8 bg-[#F8FEFF] flex flex-col space-y-6 md:flex-row md:space-y-0 md:space-x-3  md:justify-between'>
             <div className='h-96 w-[80vw] md:w-1/3 border-8 border-gray-200 shadow-md -rotate-4' >
                 <img src={halo} alt=""  className='h-full w-full object-cover'/>
             </div>

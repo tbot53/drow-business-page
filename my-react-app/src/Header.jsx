@@ -4,6 +4,10 @@ import { MdClose } from "react-icons/md";
 import './VerticalMarquee.css'
 
 const Header = () => {
+  const [mobileMenu, setMobileMenu] = useState(false);
+  function menuClick(){
+    setMobileMenu(prev => !prev)
+  }
   return (
     <header className='bg-black text-white font-bold  py-4 px-2 fixed w-full top-0 left-0 z-100 overflow-x-hidden '>
       <nav className='flex items-center justify-between'>
@@ -16,9 +20,9 @@ const Header = () => {
           </div>
           <nav className='text-3xl font-semibold hidden md:flex '>
             <ul className='flex space-x-4'>
-              <li><a href="">Services</a></li>
-              <li><a href="">About</a></li>
-              <li><a href="">Projects</a></li>
+              <li><a href="#service">Services</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#project">Projects</a></li>
             </ul>
           </nav>
 
@@ -38,9 +42,9 @@ const Header = () => {
 
       {mobileMenu && <nav className='text-3xl font-semibold pt-3 '>
         <ul className='flex flex-col space-y-4'>
-          <li><a href="">Services</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Projects</a></li>
+          <li><a href="#service">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#project">Projects</a></li>
         </ul>
       </nav>}
       
