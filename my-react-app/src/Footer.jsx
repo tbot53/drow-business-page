@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <footer className='bg-black p-8 text-white overflow-x-hidden md:h-[100vh] md:p-12'>
       <section className='relative pb-12' >
-        <h2 className='font-bold text-4xl text-center text-white md:text-8xl md:font-extrabold'>Let's make something extraordinary</h2>
+        <h2 className='font-bold text-4xl text-center text-white md:text-7xl md:font-extrabold'>Let's make something extraordinary</h2>
 
         <CiHeart className='text-amber-300 text-3xl rotate-45 w-fit absolute -bottom-10 left-[40%] ' size={"4.5rem"} strokeWidth={1.5} />
         <FaDotCircle  className="text-blue-400 text-3xl rotate-45 w-fit absolute -top-15 left-[40%]"
