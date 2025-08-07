@@ -43,28 +43,6 @@ const Body = () => {
         },
 
     ]
-    useEffect(() => {
-        const section = document.getElementById("horizontal-scroll");
-        const wrapper = document.getElementById("scroll-wrapper");
-    
-        const handleScroll = () => {
-          const isWide = window.innerWidth >= 768; // md breakpoint in Tailwind
-    
-          if (!isWide) {
-            wrapper.style.transform = 'none';
-            return;
-          }
-    
-          const rect = section.getBoundingClientRect();
-          if (rect.top <= 0 && Math.abs(rect.top) <= rect.height) {
-            const scrollAmount = Math.min(rect.height, Math.abs(rect.top));
-            wrapper.style.transform = `translateX(-${scrollAmount}px)`;
-          }
-        };
-    
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
   return (
     <main className='overflow-x-hidden'>
         <section className="  relative  mt-10 p-8 z-10 md:h-[70vh] md:flex md:items-center md:justify-center">
@@ -79,7 +57,7 @@ const Body = () => {
                 </div>
             </div>
         </section>
-        <section className="flex space-x-1 md:h-120 h-96 w-full overflow-hidden bg-black inward-curve-top">
+        <section className="flex space-x-1 md:h-[75vh] h-96 w-full overflow-hidden bg-black inward-curve-top">
             {directions.map((direction, index) => (
                 <div key={index} className="w-1/3 h-full overflow-hidden relative">
                 <div className={`marquee-container ${direction === 'down' ? 'scroll-down' : 'scroll-up'}`}>
@@ -121,8 +99,8 @@ const Body = () => {
                 <p>Making it as easy as possible for you</p>
             </h2>
             <hr />
-            <div className='flex flex-col space-y-3 md:flex-row md:space-y-0 md:space-x-3 overflow-x-scroll'>
-                <article>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-2'>
+                <article >
                     <h3 className='mb-2 mt-5 font-bold text-4xl md:text-6xl flex space-x-2 items-center '>
                         <p>Strategy</p>
                         <TbArrowWaveRightUp className='text-amber-300 pt-4' size={"4.5rem"}  strokeWidth='3' />
@@ -135,7 +113,7 @@ const Body = () => {
                     </div>
                 </article>
 
-                <article>
+                <article >
                     <h3 className='mb-2 mt-5 font-bold text-4xl md:text-6xl flex space-x-2 items-center '>
                         <p>Design</p>
                         <HiMiniComputerDesktop className='text-pink-400 pt-4 -rotate-x-30 -rotate-y-45 ' size={"4.5rem"}  />
@@ -147,7 +125,7 @@ const Body = () => {
                         <img src={shooter2} alt="" className='h-full w-full object-cover rounded-xl' />
                     </div>
                 </article>
-                <article>
+                <article >
                     <h3 className='mb-2 mt-5 font-bold text-4xl md:text-6xl flex space-x-2 items-center '>
                         <p>Build</p>
                         <FaRegCircle className='text-blue-300 pt-4 rotate-45 ' size={"4.5rem"}  />
@@ -159,7 +137,7 @@ const Body = () => {
                         <img src={shooter2} alt="" className='h-full w-full object-cover rounded-xl' />
                     </div>
                 </article>
-                <article>
+                <article className='pt-4'>
                     <h3 className='mb-2 mt-5 font-bold text-4xl md:text-6xl flex space-x-6 items-center '>
                         <p>Maintain</p>
                         <div className='text-green-300  rotate-30  '  >X</div>
@@ -182,7 +160,7 @@ const Body = () => {
             <div className='flex flex-col space-y-6 md:flex-row md:space-y-0 md:space-x-8 md:items-center md:justify-center'>
                 {pointInfo.map((points, index)=>{
                     return(
-                       <article key={index} className={`border-2 border-black p-4 bg-white rounded-lg shadow-xl md:w-72 md:h-102 `} style={{ transform: `rotate(${points.deg}deg)` }}>
+                       <article key={index} className={`border-2 border-black p-4 bg-white rounded-lg shadow-xl md:w-72 md:h-102 border-r-6 border-b-6`} style={{ transform: `rotate(${points.deg}deg)` }}>
                             <h3 className='font-bold text-2xl md:text-4xl'>{points.title}</h3>
                             <p className='md:text-xl'>{points.subtitle}</p>
                             <p className='text-green-500 text-3xl rotate-45 w-fit' size={"4.5rem"} >{points.icon}</p>

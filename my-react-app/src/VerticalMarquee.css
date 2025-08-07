@@ -48,3 +48,6 @@
     clip-path: ellipse(100% 150% at 50% 150%);
 }
 
+.text-shadow-right {
+  text-shadow: 2px 2px 2px rgba(227, 222, 222, 0.92); /* gray shadow to bottom-right */
+}
