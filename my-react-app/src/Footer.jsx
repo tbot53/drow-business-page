@@ -18,7 +18,7 @@ const Footer = () => {
         <HiMiniComputerDesktop className='text-pink-500 text-3xl rotate-z-20 -rotate-x-30 w-fit absolute top-0 -right-10' size={"4.5rem"}/>
       </section>
       <hr className='border-1 border-b-gray-700' />
-      <section className='py-6 grid grid-cols-1 md:grid-cols-4 gap-2 md:text-3xl text-lg font-semibold md:py-24'>
+      <section className='py-6 grid grid-cols-1 md:grid-cols-4 gap-2 md:text-3xl text-lg font-semibold md:py-18'>
         <div className='md:flex items-center justify-center font-extrabold hidden text-6xl -rotate-z-3 rotate-y-3'>
           <span className='text-pink-500 text-shadow-right'>D</span>
           <span className='text-amber-300 text-shadow-right'>R</span>
